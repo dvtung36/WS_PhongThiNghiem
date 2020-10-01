@@ -22,7 +22,7 @@ namespace ManagerLabRoom
         {
             mWsPhongthinghiemsoapclient = new WS_PTN.WS_PhongThiNghiemSoapClient();
           
-            if (tbchungloai.Text != null) {
+            if (tbchungloai.Text != "") {
 
                 string chungloai = tbchungloai.Text;
                 DataSet dataSet = new DataSet();
@@ -43,7 +43,7 @@ namespace ManagerLabRoom
         {
             mWsPhongthinghiemsoapclient = new WS_PTN.WS_PhongThiNghiemSoapClient();
        
-            if (tvIDGV.Text != null) {
+            if (tvIDGV.Text != "") {
                 int idGV = int.Parse(tvIDGV.Text);
                 DataSet dataSet = new DataSet();
                 dataSet = mWsPhongthinghiemsoapclient.getListBaiThiNghiem(idGV);
