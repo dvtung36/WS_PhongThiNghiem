@@ -10,9 +10,17 @@ namespace WSPhongThiNghiem.model
     public partial class ThietBi
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ThietBi()
+        public ThietBi(int v)
         {
             ChiTietPhieuMuons = new HashSet<ChiTietPhieuMuon>();
+        }
+
+        public ThietBi(int v, string v1, string v2, string v3) : this(v)
+        {
+            this.MaTB = v;
+            this.TenTB = v1;
+            this.ChungLoai = v2;
+            this.PhanMem=v3;
         }
 
         [Key]

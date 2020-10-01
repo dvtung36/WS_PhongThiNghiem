@@ -8,3 +8,13 @@ C:\Users\admin\Desktop\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.cs
 C:\Users\admin\Desktop\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.exe
 C:\Users\admin\Desktop\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.pdb
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.csprojAssemblyReference.cache
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.Client_Form.resources
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.Properties.Resources.resources
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.csproj.GenerateResource.cache
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.csproj.CoreCompileInputs.cache
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.exe
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\obj\Debug\ManagerLabRoom.pdb
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\bin\Debug\ManagerLabRoom.exe.config
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\bin\Debug\ManagerLabRoom.exe
+E:\WS_PhongThiNghiem\PhongThiNghiem\ManagerLabRoom\bin\Debug\ManagerLabRoom.pdb

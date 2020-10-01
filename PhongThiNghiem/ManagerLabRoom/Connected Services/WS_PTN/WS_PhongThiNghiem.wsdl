@@ -2,34 +2,157 @@
 <wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="HelloWorld">
-        <s:complexType />
-      </s:element>
-      <s:element name="HelloWorldResponse">
+      <s:element name="getListThietBi">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mChungLoai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListThietBiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListThietBiResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getThietBiToiHan">
+        <s:complexType />
+      </s:element>
+      <s:element name="getThietBiToiHanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getThietBiToiHanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getThietBiQuaHan">
+        <s:complexType />
+      </s:element>
+      <s:element name="getThietBiQuaHanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getThietBiQuaHanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListBaiThiNghiem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaGV" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListBaiThiNghiemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListBaiThiNghiemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="HelloWorldSoapIn">
-    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  <wsdl:message name="getListThietBiSoapIn">
+    <wsdl:part name="parameters" element="tns:getListThietBi" />
   </wsdl:message>
-  <wsdl:message name="HelloWorldSoapOut">
-    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  <wsdl:message name="getListThietBiSoapOut">
+    <wsdl:part name="parameters" element="tns:getListThietBiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getThietBiToiHanSoapIn">
+    <wsdl:part name="parameters" element="tns:getThietBiToiHan" />
+  </wsdl:message>
+  <wsdl:message name="getThietBiToiHanSoapOut">
+    <wsdl:part name="parameters" element="tns:getThietBiToiHanResponse" />
+  </wsdl:message>
+  <wsdl:message name="getThietBiQuaHanSoapIn">
+    <wsdl:part name="parameters" element="tns:getThietBiQuaHan" />
+  </wsdl:message>
+  <wsdl:message name="getThietBiQuaHanSoapOut">
+    <wsdl:part name="parameters" element="tns:getThietBiQuaHanResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListBaiThiNghiemSoapIn">
+    <wsdl:part name="parameters" element="tns:getListBaiThiNghiem" />
+  </wsdl:message>
+  <wsdl:message name="getListBaiThiNghiemSoapOut">
+    <wsdl:part name="parameters" element="tns:getListBaiThiNghiemResponse" />
   </wsdl:message>
   <wsdl:portType name="WS_PhongThiNghiemSoap">
-    <wsdl:operation name="HelloWorld">
-      <wsdl:input message="tns:HelloWorldSoapIn" />
-      <wsdl:output message="tns:HelloWorldSoapOut" />
+    <wsdl:operation name="getListThietBi">
+      <wsdl:input message="tns:getListThietBiSoapIn" />
+      <wsdl:output message="tns:getListThietBiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getThietBiToiHan">
+      <wsdl:input message="tns:getThietBiToiHanSoapIn" />
+      <wsdl:output message="tns:getThietBiToiHanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getThietBiQuaHan">
+      <wsdl:input message="tns:getThietBiQuaHanSoapIn" />
+      <wsdl:output message="tns:getThietBiQuaHanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListBaiThiNghiem">
+      <wsdl:input message="tns:getListBaiThiNghiemSoapIn" />
+      <wsdl:output message="tns:getListBaiThiNghiemSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WS_PhongThiNghiemSoap" type="tns:WS_PhongThiNghiemSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+    <wsdl:operation name="getListThietBi">
+      <soap:operation soapAction="http://tempuri.org/getListThietBi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThietBiToiHan">
+      <soap:operation soapAction="http://tempuri.org/getThietBiToiHan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThietBiQuaHan">
+      <soap:operation soapAction="http://tempuri.org/getThietBiQuaHan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListBaiThiNghiem">
+      <soap:operation soapAction="http://tempuri.org/getListBaiThiNghiem" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -40,8 +163,35 @@
   </wsdl:binding>
   <wsdl:binding name="WS_PhongThiNghiemSoap12" type="tns:WS_PhongThiNghiemSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+    <wsdl:operation name="getListThietBi">
+      <soap12:operation soapAction="http://tempuri.org/getListThietBi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThietBiToiHan">
+      <soap12:operation soapAction="http://tempuri.org/getThietBiToiHan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getThietBiQuaHan">
+      <soap12:operation soapAction="http://tempuri.org/getThietBiQuaHan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListBaiThiNghiem">
+      <soap12:operation soapAction="http://tempuri.org/getListBaiThiNghiem" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

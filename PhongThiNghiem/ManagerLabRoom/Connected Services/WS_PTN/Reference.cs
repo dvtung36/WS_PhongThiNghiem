@@ -9,79 +9,40 @@
 //------------------------------------------------------------------------------
 
 namespace ManagerLabRoom.WS_PTN {
+    using System.Data;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WS_PTN.WS_PhongThiNghiemSoap")]
     public interface WS_PhongThiNghiemSoap {
         
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        ManagerLabRoom.WS_PTN.HelloWorldResponse HelloWorld(ManagerLabRoom.WS_PTN.HelloWorldRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getListThietBi", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet getListThietBi(string mChungLoai);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<ManagerLabRoom.WS_PTN.HelloWorldResponse> HelloWorldAsync(ManagerLabRoom.WS_PTN.HelloWorldRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getListThietBi", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> getListThietBiAsync(string mChungLoai);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public ManagerLabRoom.WS_PTN.HelloWorldRequestBody Body;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getThietBiToiHan", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet getThietBiToiHan();
         
-        public HelloWorldRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getThietBiToiHan", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> getThietBiToiHanAsync();
         
-        public HelloWorldRequest(ManagerLabRoom.WS_PTN.HelloWorldRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getThietBiQuaHan", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet getThietBiQuaHan();
         
-        public HelloWorldRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getThietBiQuaHan", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> getThietBiQuaHanAsync();
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public ManagerLabRoom.WS_PTN.HelloWorldResponseBody Body;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getListBaiThiNghiem", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet getListBaiThiNghiem(int MaGV);
         
-        public HelloWorldResponse() {
-        }
-        
-        public HelloWorldResponse(ManagerLabRoom.WS_PTN.HelloWorldResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class HelloWorldResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
-        
-        public HelloWorldResponseBody() {
-        }
-        
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getListBaiThiNghiem", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> getListBaiThiNghiemAsync(int MaGV);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,27 +72,36 @@ namespace ManagerLabRoom.WS_PTN {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ManagerLabRoom.WS_PTN.HelloWorldResponse ManagerLabRoom.WS_PTN.WS_PhongThiNghiemSoap.HelloWorld(ManagerLabRoom.WS_PTN.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
+        public System.Data.DataSet getListThietBi(string mChungLoai) {
+            return base.Channel.getListThietBi(mChungLoai);
         }
         
-        public string HelloWorld() {
-            ManagerLabRoom.WS_PTN.HelloWorldRequest inValue = new ManagerLabRoom.WS_PTN.HelloWorldRequest();
-            inValue.Body = new ManagerLabRoom.WS_PTN.HelloWorldRequestBody();
-            ManagerLabRoom.WS_PTN.HelloWorldResponse retVal = ((ManagerLabRoom.WS_PTN.WS_PhongThiNghiemSoap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
+        public System.Threading.Tasks.Task<System.Data.DataSet> getListThietBiAsync(string mChungLoai) {
+            return base.Channel.getListThietBiAsync(mChungLoai);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ManagerLabRoom.WS_PTN.HelloWorldResponse> ManagerLabRoom.WS_PTN.WS_PhongThiNghiemSoap.HelloWorldAsync(ManagerLabRoom.WS_PTN.HelloWorldRequest request) {
-            return base.Channel.HelloWorldAsync(request);
+        public System.Data.DataSet getThietBiToiHan() {
+            return base.Channel.getThietBiToiHan();
         }
         
-        public System.Threading.Tasks.Task<ManagerLabRoom.WS_PTN.HelloWorldResponse> HelloWorldAsync() {
-            ManagerLabRoom.WS_PTN.HelloWorldRequest inValue = new ManagerLabRoom.WS_PTN.HelloWorldRequest();
-            inValue.Body = new ManagerLabRoom.WS_PTN.HelloWorldRequestBody();
-            return ((ManagerLabRoom.WS_PTN.WS_PhongThiNghiemSoap)(this)).HelloWorldAsync(inValue);
+        public System.Threading.Tasks.Task<System.Data.DataSet> getThietBiToiHanAsync() {
+            return base.Channel.getThietBiToiHanAsync();
+        }
+        
+        public System.Data.DataSet getThietBiQuaHan() {
+            return base.Channel.getThietBiQuaHan();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> getThietBiQuaHanAsync() {
+            return base.Channel.getThietBiQuaHanAsync();
+        }
+        
+        public System.Data.DataSet getListBaiThiNghiem(int MaGV) {
+            return base.Channel.getListBaiThiNghiem(MaGV);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> getListBaiThiNghiemAsync(int MaGV) {
+            return base.Channel.getListBaiThiNghiemAsync(MaGV);
         }
     }
 }
